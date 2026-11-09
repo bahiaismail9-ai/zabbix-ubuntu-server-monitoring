@@ -63,21 +63,20 @@ GitHub: https://github.com/bahiaismail9-ai
 
 ## Infrastructure Architecture
 
-The following diagram illustrates the project architecture and the monitoring environment.
-
-```mermaid
 flowchart TB
     A["VMware Workstation"]
-    A --> B["Ubuntu Server"]
-    A --> C["GLPI / Monitored Host"]
 
-    B --> D["Zabbix Server 7.0"]
-    B --> E["MariaDB"]
-    B --> F["Apache2"]
+    A --> B["VM 1 - Ubuntu Server"]
+    A --> C["VM 2 - Ubuntu Server"]
 
-    C --> G["Monitoring Data"]
-    G --> D
+    B --> D["GLPI Server"]
 
-    D --> H["Zabbix Dashboard"]
-    D --> I["Triggers and Alerts"]
-```
+    C --> E["Zabbix Server 7.0"]
+    C --> F["MariaDB"]
+    C --> G["Apache2"]
+
+    D -.->|"Network Monitoring"| E
+
+    E --> H["Zabbix Dashboard"]
+    E --> I["Triggers and Alerts"]
+
