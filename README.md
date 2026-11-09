@@ -60,3 +60,24 @@ Ismail Bahia
 IT Infrastructure | Systems & Networks
 
 GitHub: https://github.com/bahiaismail9-ai
+
+## Infrastructure Architecture
+
+The following diagram illustrates the project architecture and the monitoring environment.
+
+```mermaid
+flowchart TB
+    A["VMware Workstation"]
+    A --> B["Ubuntu Server"]
+    A --> C["GLPI / Monitored Host"]
+
+    B --> D["Zabbix Server 7.0"]
+    B --> E["MariaDB"]
+    B --> F["Apache2"]
+
+    C --> G["Monitoring Data"]
+    G --> D
+
+    D --> H["Zabbix Dashboard"]
+    D --> I["Triggers and Alerts"]
+```
