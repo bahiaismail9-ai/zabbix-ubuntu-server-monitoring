@@ -1,4 +1,4 @@
-# Zabbix 7.0 – Ubuntu Server Monitoring
+# Zabbix 7.0 – Ubuntu Server Monitoring 
 
 ## Project Overview
 
